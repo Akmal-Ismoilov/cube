@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #2e2e2e;
+  height: 10%;
+}
+.container{
+  width: 700px;
+  perspective: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .cube{
+  display: inline-block;
+  margin-right: 30px;
+}
+.cube{
+  margin: auto;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transition: transform 1.5s ease;
+  cursor: pointer;
+}
+.cube:hover{
+  transform: rotateX(180deg) rotateY(720deg);
+  transform-style: preserve-3d;
+}
+.side {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+.side.red{
+  background-color: red;
+  color: #fff;
+}
+.side.gray{
+  background-color: rgb(236, 234, 234);
+  color: rgb(121, 121, 121);
+}
+.side .icon{
+  margin: 30% auto;
+  font-size: 85px;
+}
+.side.front{
+  transform: translate3d(0, 0, 100px);
+  z-index: 2;
+}
+.side.left{
+  transform: translate3d(-100px, 0, 0) rotateY(-90deg);
+}
+.side.right{
+  transform: translate3d(100px, 0, 0) rotateY(90deg);
+}
+.side.back{
+  transform: translate3d(0px, 0, -100px) rotateX(180deg);
+}
+.side.top{
+  transform: translate3d(0px, -100px, 0px) rotateX(90deg);
+}
+.side.bottom{
+  transform: translate3d(0px, 100px, 0px) rotateX(90deg);
+}
+.side.blue{
+  background-color: blue;
+  color: #fff;
+}
+.side.insta{
+  color: #fff;
+  background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+
+}
